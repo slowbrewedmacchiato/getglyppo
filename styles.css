@@ -86,6 +86,37 @@ img { display: block; max-width: 100%; height: auto; }
   }
 }
 
+/* Mobile menu animations */
+#mobile-menu {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Better mobile spacing */
+@media (max-width: 640px) {
+  .feature-card {
+    padding: 0.875rem;
+  }
+  
+  .feature-card.step {
+    padding-left: 2.75rem;
+  }
+  
+  .feature-card .step-number {
+    left: 0.75rem;
+    top: 0.875rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .feature-card {
+    padding: 1.125rem;
+  }
+}
+
 /* Privacy page helpers (shared) */
 .prose { max-width: 75ch; }
 .privacy-policy h1 { font-size: 2rem; font-weight: 800; color: var(--text-primary); }
