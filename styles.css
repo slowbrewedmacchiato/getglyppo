@@ -1,0 +1,130 @@
+/* Glyppo landing styles (minimal tweaks; layout via Tailwind) */
+
+:root {
+  color-scheme: light dark;
+  --glyppo-coral: #FF6B6B;
+  --glyppo-tangerine: #FFA41B;
+  --glyppo-aqua: #2BD2FF;
+  --glyppo-teal: #14B8A6; /* SecondaryTeal */
+  --glyppo-cobalt: #2459FF; /* SecondaryCobalt */
+  --glyppo-indigo: #4F46E5; /* SecondaryIndigo */
+  --text-primary: #0E1113;
+  --text-secondary: #4B5563;
+  --surface: #F7F8FA;
+}
+
+html, body { margin: 0; padding: 0; }
+img { display: block; max-width: 100%; height: auto; }
+
+/* Buttons */
+.btn-primary {
+  background-image: linear-gradient(135deg, var(--glyppo-coral), var(--glyppo-tangerine));
+}
+.btn-primary:hover { filter: brightness(0.95); }
+
+/* Cards */
+.feature-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.2s ease;
+}
+.feature-card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(255, 107, 107, 0.15); }
+.feature-card.simple { background: linear-gradient(135deg, #ffffff, #fafafa); }
+.feature-card.step { position: relative; padding-left: 3.25rem; }
+.feature-card .step-number {
+  position: absolute; left: 1rem; top: 1rem;
+  width: 1.75rem; height: 1.75rem; border-radius: 999px;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #fff; font-weight: 700; font-size: 0.9rem;
+  background-image: linear-gradient(135deg, var(--glyppo-coral), var(--glyppo-tangerine));
+}
+
+/* Tone accents */
+.feature-card.tone-coral { background: linear-gradient(135deg, #fff5f5, #ffecec); border-left: 4px solid var(--glyppo-coral); }
+.feature-card.tone-tangerine { background: linear-gradient(135deg, #fff8ee, #fff2e0); border-left: 4px solid var(--glyppo-tangerine); }
+.feature-card.tone-aqua { background: linear-gradient(135deg, #effaff, #dcf6ff); border-left: 4px solid var(--glyppo-aqua); }
+.feature-card.tone-teal { background: linear-gradient(135deg, #eefaf7, #ddf4ef); border-left: 4px solid var(--glyppo-teal); }
+.feature-card.tone-indigo { background: linear-gradient(135deg, #f5f3ff, #ecebff); border-left: 4px solid var(--glyppo-indigo); }
+.feature-card.tone-cobalt { background: linear-gradient(135deg, #eef1ff, #e5e9ff); border-left: 4px solid var(--glyppo-cobalt); }
+
+/* Device frame */
+.device-frame {
+  border-radius: 12px;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--glyppo-coral), var(--glyppo-tangerine));
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  max-width: 320px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.device-frame img {
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.device-frame:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive scaling for device frames */
+@media (max-width: 640px) {
+  .device-frame {
+    max-width: 280px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .device-frame {
+    max-width: 300px;
+  }
+}
+
+/* Privacy page helpers (shared) */
+.prose { max-width: 75ch; }
+.privacy-policy h1 { font-size: 2rem; font-weight: 800; color: var(--text-primary); }
+.privacy-policy h2 { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-top: 2rem; }
+.privacy-policy p { color: var(--text-secondary); }
+
+/* Privacy policy special boxes */
+.highlight-box {
+  background: linear-gradient(135deg, #fff5f5, #ffecec);
+  border-left: 4px solid var(--glyppo-coral);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.summary-box {
+  background: linear-gradient(135deg, #eefaf7, #ddf4ef);
+  border-left: 4px solid var(--glyppo-teal);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.analytics-box {
+  background: linear-gradient(135deg, #f5f3ff, #ecebff);
+  border-left: 4px solid var(--glyppo-indigo);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+/* Bullet points for lists */
+.bullet-point {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--glyppo-coral);
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  margin-top: 0.5rem;
+  vertical-align: top;
+}
