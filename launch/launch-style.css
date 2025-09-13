@@ -110,14 +110,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--bg-white);
-  border-right: 1px solid #E5E7EB;
+  background-color: transparent;
   position: relative;
 }
 
-.promo-panel:last-child {
-  border-right: none;
-}
 
 .panel-content {
   text-align: center;
@@ -188,12 +184,11 @@ body {
   border-radius: 20px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   object-fit: cover;
-  border: 2px solid #E5E7EB;
 }
 
-/* All panels have uniform background */
+/* All panels have transparent background */
 .promo-panel {
-  background-color: var(--bg-white);
+  background-color: transparent;
 }
 
 /* Responsive adjustments for smaller screens */
