@@ -176,22 +176,27 @@
     </main>
 
     <footer class="bg-neutral-950 text-neutral-200">
-      <div class="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-3 gap-6">
-        <div>
-          <div class="flex items-center gap-2">
-            <img src="assets/AppIcon.png" alt="Glyppo" class="h-6 w-6" />
-            <span class="font-semibold">Glyppo</span>
+      <div class="mx-auto max-w-6xl px-4 py-8 sm:py-10">
+        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+          <!-- Left Section: App Info & Navigation -->
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 w-full lg:w-auto">
+            <div class="flex flex-col">
+              <a href="https://apps.apple.com/app/id6751930050" class="flex items-center gap-2 hover:opacity-80" target="_blank" rel="noopener noreferrer" aria-label="Get Glyppo on the App Store">
+                <img src="assets/AppIcon.png" alt="Glyppo" class="h-6 w-6" />
+                <span class="font-semibold text-lg">Glyppo</span>
+              </a>
+              <p class="text-sm text-neutral-400 mt-2 max-w-xs">GLP‑1 tracker with smart reminders and widgets.</p>
+            </div>
+            <nav class="flex flex-col sm:flex-row sm:gap-6 space-y-2 sm:space-y-0">
+              <a href="./index.html" class="text-sm hover:opacity-80">Home</a>
+              <a href="privacy-policy.html" class="text-sm hover:opacity-80">Privacy Policy</a>
+              <a href="https://github.com/slowbrewedmacchiato/getglyppo/issues" class="text-sm hover:opacity-80" target="_blank" rel="noopener noreferrer">Feedback & Issues</a>
+            </nav>
           </div>
-          <p class="mt-2 text-sm text-neutral-400">A simple GLP‑1 tracker with smart reminders.</p>
-        </div>
-        <div class="text-sm">
-          <ul class="space-y-2">
-            <li><a href="./index.html" class="hover:opacity-80">Home</a></li>
-            <li><a href="privacy-policy.html" class="hover:opacity-80">Privacy Policy</a></li>
-          </ul>
-        </div>
-        <div class="text-sm">
-          <p>© 2025 SlowBrewed Labs. All rights reserved.</p>
+          <!-- Right Section: Copyright -->
+          <div class="text-sm text-left lg:text-right w-full lg:w-auto">
+            <p>© 2025 SlowBrewed Labs. All rights reserved.</p>
+          </div>
         </div>
       </div>
     </footer>
